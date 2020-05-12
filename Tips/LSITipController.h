@@ -13,11 +13,20 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+// Public declarations that are visible outside this code file
+// Encapsulate our data (protect our information and control who can modify)
+
 @interface LSITipController : NSObject
 
-@property NSArray<LSITip *> *tips;
+// nonatomic (recommended, if override a property)
+// atomic*
 
-- (void)addTip:(LSITip *)tips;
+// readonly
+// readwrite*
+
+@property (nonatomic, readonly) NSArray<LSITip *> *tips;
+
+- (void)addTip:(LSITip *)tip;
 
 @end
 
