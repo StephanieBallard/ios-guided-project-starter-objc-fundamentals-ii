@@ -14,6 +14,8 @@
 		461E8AA823EC7AFA00C1F2B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461E8AA623EC7AFA00C1F2B7 /* LaunchScreen.storyboard */; };
 		461E8AAB23EC7AFA00C1F2B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 461E8AAA23EC7AFA00C1F2B7 /* main.m */; };
 		461E8AB923EC97E200C1F2B7 /* LSITipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 461E8AB823EC97E200C1F2B7 /* LSITipViewController.m */; };
+		BDEF4E53246B0347005D074F /* LSITip.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEF4E52246B0347005D074F /* LSITip.m */; };
+		BDEF4E56246B0366005D074F /* LSITipController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEF4E55246B0366005D074F /* LSITipController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		461E8AAA23EC7AFA00C1F2B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		461E8AB723EC97E200C1F2B7 /* LSITipViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSITipViewController.h; sourceTree = "<group>"; };
 		461E8AB823EC97E200C1F2B7 /* LSITipViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSITipViewController.m; sourceTree = "<group>"; };
+		BDEF4E51246B0347005D074F /* LSITip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSITip.h; sourceTree = "<group>"; };
+		BDEF4E52246B0347005D074F /* LSITip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSITip.m; sourceTree = "<group>"; };
+		BDEF4E54246B0366005D074F /* LSITipController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSITipController.h; sourceTree = "<group>"; };
+		BDEF4E55246B0366005D074F /* LSITipController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSITipController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,10 @@
 		461E8A9723EC7AF900C1F2B7 /* Tips */ = {
 			isa = PBXGroup;
 			children = (
+				BDEF4E51246B0347005D074F /* LSITip.h */,
+				BDEF4E52246B0347005D074F /* LSITip.m */,
+				BDEF4E54246B0366005D074F /* LSITipController.h */,
+				BDEF4E55246B0366005D074F /* LSITipController.m */,
 				467F766323F2253000A284A5 /* View Controller */,
 				467F766723F2256000A284A5 /* Storyboards */,
 				467F766623F2255000A284A5 /* Resources */,
@@ -170,8 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDEF4E56246B0366005D074F /* LSITipController.m in Sources */,
 				461E8A9A23EC7AF900C1F2B7 /* AppDelegate.m in Sources */,
 				461E8AB923EC97E200C1F2B7 /* LSITipViewController.m in Sources */,
+				BDEF4E53246B0347005D074F /* LSITip.m in Sources */,
 				461E8AAB23EC7AFA00C1F2B7 /* main.m in Sources */,
 				461E8A9D23EC7AF900C1F2B7 /* SceneDelegate.m in Sources */,
 			);

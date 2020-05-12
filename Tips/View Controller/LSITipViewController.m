@@ -23,6 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // hide keyboard
+//    textField.resignFirstResponder()
+    
+    // Use a tap gesture recongizer with this statement to hide keyboard (on view)
+//    [self.view endEditing:false];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
