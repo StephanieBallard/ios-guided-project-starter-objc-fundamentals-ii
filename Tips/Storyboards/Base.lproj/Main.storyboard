@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oP8-A4-c0t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oP8-A4-c0t">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -69,6 +69,9 @@
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Aqe-rd-BYX">
                                                 <rect key="frame" x="280" y="0.0" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="updateSplit:" destination="oP8-A4-c0t" eventType="valueChanged" id="QUo-7h-xdw"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -94,12 +97,18 @@
                                             </stackView>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="kNt-id-Gqe">
                                                 <rect key="frame" x="-2" y="32" width="378" height="31"/>
+                                                <connections>
+                                                    <action selector="updatePercentage:" destination="oP8-A4-c0t" eventType="valueChanged" id="MOq-Ev-Qsi"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDA-Ul-XQd">
                                         <rect key="frame" x="0.0" y="267" width="374" height="30"/>
                                         <state key="normal" title="Save Tip"/>
+                                        <connections>
+                                            <action selector="saveTipPressed:" destination="oP8-A4-c0t" eventType="touchUpInside" id="rot-zf-F8G"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -139,6 +148,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RQC-Sa-V0t"/>
                     </view>
+                    <connections>
+                        <outlet property="percentageLabel" destination="DMG-Uo-Xic" id="0Ur-9X-fGn"/>
+                        <outlet property="percentageSlider" destination="kNt-id-Gqe" id="7yS-vP-J4U"/>
+                        <outlet property="splitLabel" destination="6bP-jL-21Q" id="rMs-ti-438"/>
+                        <outlet property="splitStepper" destination="Aqe-rd-BYX" id="Tra-jp-uHj"/>
+                        <outlet property="tableView" destination="GwR-Pd-0HM" id="1Eg-Xi-6be"/>
+                        <outlet property="tipLabel" destination="SwS-gX-2WU" id="2zT-p2-3iM"/>
+                        <outlet property="totalTextField" destination="Dtn-8P-b8p" id="zrn-81-jyr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W8p-fq-xn2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
