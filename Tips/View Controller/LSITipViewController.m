@@ -7,9 +7,11 @@
 //
 
 #import "LSITipViewController.h"
+#import "LSITipController.h"
+#import "LSITip.h"
 
 // Class Extension (Private attributes)
-@interface LSITipViewController ()
+@interface LSITipViewController () <UITableViewDelegate, UITableViewDataSource>
 
 // Private Properties
 @property (nonatomic) double total;
@@ -41,6 +43,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Move to init or computed property
+    self.tipController = [[LSITipController alloc] init];
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
     // hide keyboard
 //    textField.resignFirstResponder()
     
@@ -50,7 +58,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
 }
 
 - (void)calculateTip {
@@ -76,9 +83,11 @@
 }
 
 - (void)saveTipNamed:(NSString *)name {
+    LSITip *tip = [[LSITip alloc] initWithName:name total: self.total splitCount:self.split tipPercentage:self.tip];
     
-    // TODO: Save the tip to the controller and update tableview
-
+    [self.tipController addTip:tip];
+    
+    [self.tableView reloadData];
 }
 
 // MARK: - IBActions
@@ -98,11 +107,18 @@
 
 // MARK: - UITableViewDataSource
 
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.tipController.tips.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"TipCell" forIndexPath:indexPath];
+    
+    LSITip *tip = [self.tipController.tips objectAtIndex:indexPath.row];
+    cell.textLabel.text = tip.name; // TODO: add other attributes or a custom cell
+    
+    return cell;
+}
 
 // MARK: - UITableViewDelegate
 

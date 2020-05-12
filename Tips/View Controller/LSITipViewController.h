@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class LSITipController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LSITipViewController : UIViewController
 
 // You might not want to put outlets here, unless you want to expose them
 // as public API
+
+@property LSITipController *tipController;
 
 @end
 
