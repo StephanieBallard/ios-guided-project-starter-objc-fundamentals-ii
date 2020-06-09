@@ -6,7 +6,11 @@
 //  Copyright © 2020 Lambda School. All rights reserved.
 //
 
+// Implementation File (.m) = essentially private*
+
 #import "LSITipViewController.h"
+
+// Objective-C: Class Extension (Different from Swift's extension)
 
 @interface LSITipViewController ()
 
