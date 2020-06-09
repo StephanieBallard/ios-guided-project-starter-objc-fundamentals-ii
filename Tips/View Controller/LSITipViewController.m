@@ -56,7 +56,18 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
+    // Add support for "Return" to calculate
+    self.totalTextField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+    [self.totalTextField addTarget:self
+                            action:@selector(totalTextFieldDidEndEditing:)
+                  forControlEvents:UIControlEventEditingDidEndOnExit];
+    
     [self calculateTip];
+}
+
+- (void)totalTextFieldDidEndEditing:(UITextField *)textField {
+    [self calculateTip];
+    [textField resignFirstResponder]; // dismiss the keyboard
 }
 
 - (void)calculateTip
