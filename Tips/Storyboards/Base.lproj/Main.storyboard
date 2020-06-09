@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oP8-A4-c0t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oP8-A4-c0t">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,7 +24,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwS-gX-2WU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$4.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwS-gX-2WU">
                                         <rect key="frame" x="0.0" y="34" width="374" height="41"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
@@ -139,10 +139,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RQC-Sa-V0t"/>
                     </view>
+                    <connections>
+                        <outlet property="percentageLabel" destination="DMG-Uo-Xic" id="CHe-QF-fmB"/>
+                        <outlet property="percentageSlider" destination="kNt-id-Gqe" id="mVH-Xp-nG8"/>
+                        <outlet property="splitLabel" destination="6bP-jL-21Q" id="inC-2y-KfY"/>
+                        <outlet property="splitStepper" destination="Aqe-rd-BYX" id="4FD-H0-Ugf"/>
+                        <outlet property="tableView" destination="GwR-Pd-0HM" id="sGz-fr-K1F"/>
+                        <outlet property="tipLabel" destination="SwS-gX-2WU" id="ZIo-eG-PBm"/>
+                        <outlet property="totalTextField" destination="Dtn-8P-b8p" id="QCV-BO-9bo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W8p-fq-xn2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="186.95652173913044" y="95.758928571428569"/>
+            <point key="canvasLocation" x="-341" y="118"/>
         </scene>
     </scenes>
 </document>

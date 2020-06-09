@@ -10,13 +10,16 @@
 
 // Header File (.h) is a public interface
 
+@class LSITipController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LSITipViewController : UIViewController
 
 // (Public Instance variables) - Paul doesn't recommend in header file
 
-// Public Properties
+// Public Properties (dependency injection)
+@property (nonatomic) LSITipController *tipController;
 
 // Public Methods
 
