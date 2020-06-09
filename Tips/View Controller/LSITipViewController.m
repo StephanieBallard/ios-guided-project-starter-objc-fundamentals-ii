@@ -14,7 +14,7 @@
 
 // Objective-C: Class Extension (Different from Swift's extension)
 
-@interface LSITipViewController ()
+@interface LSITipViewController () <UITableViewDelegate, UITableViewDataSource>
 
 // Private Properties
 @property (nonatomic) LSITip *currentTip;
@@ -49,8 +49,14 @@
     [super viewDidLoad];
     
     // TODO: move to init
+    // NOTE: if you don't init your variables, they are nil, and nothing happens! They won't work like you expect, but also Xcode or your app do not crash like Swift optionals that are nil
     self.currentTip = [[LSITip alloc] init];
+    self.tipController = [[LSITipController alloc] init];
     
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    [self calculateTip];
 }
 
 - (void)calculateTip
@@ -82,7 +88,7 @@
 - (void)saveTipNamed:(NSString *)name
 {
     // Create a copy of our current tip (FuTURE: implement copy)
-    LSITip *tip = [[LSITip alloc] initWithName:self.currentTip.name
+    LSITip *tip = [[LSITip alloc] initWithName:name
                                          total:self.currentTip.total
                                  tipPercentage:self.currentTip.tipPercentage
                                     splitCount:self.currentTip.splitCount];
@@ -111,11 +117,20 @@
 
 // MARK: - UITableViewDataSource
 
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.tipController.tips.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TipCell" forIndexPath:indexPath];
+    
+//    LSITip *tip = [self.tipController.tips objectAtIndex:indexPath.row];
+    LSITip *tip = self.tipController.tips[indexPath.row];
+    
+    cell.textLabel.text = tip.name;
+    
+    return cell;
+}
 
 // MARK: - UITableViewDelegate
 
