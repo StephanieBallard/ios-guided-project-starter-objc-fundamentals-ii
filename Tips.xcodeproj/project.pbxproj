@@ -14,6 +14,8 @@
 		461E8AA823EC7AFA00C1F2B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461E8AA623EC7AFA00C1F2B7 /* LaunchScreen.storyboard */; };
 		461E8AAB23EC7AFA00C1F2B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 461E8AAA23EC7AFA00C1F2B7 /* main.m */; };
 		461E8AB923EC97E200C1F2B7 /* LSITipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 461E8AB823EC97E200C1F2B7 /* LSITipViewController.m */; };
+		5A40AC2F24BDA02900818E64 /* SABTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A40AC2E24BDA02900818E64 /* SABTip.m */; };
+		5A40AC3224BDA04C00818E64 /* SABTipController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A40AC3124BDA04C00818E64 /* SABTipController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		461E8AAA23EC7AFA00C1F2B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		461E8AB723EC97E200C1F2B7 /* LSITipViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSITipViewController.h; sourceTree = "<group>"; };
 		461E8AB823EC97E200C1F2B7 /* LSITipViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSITipViewController.m; sourceTree = "<group>"; };
+		5A40AC2D24BDA02900818E64 /* SABTip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SABTip.h; sourceTree = "<group>"; };
+		5A40AC2E24BDA02900818E64 /* SABTip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SABTip.m; sourceTree = "<group>"; };
+		5A40AC3024BDA04C00818E64 /* SABTipController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SABTipController.h; sourceTree = "<group>"; };
+		5A40AC3124BDA04C00818E64 /* SABTipController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SABTipController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,10 @@
 		461E8A9723EC7AF900C1F2B7 /* Tips */ = {
 			isa = PBXGroup;
 			children = (
+				5A40AC2D24BDA02900818E64 /* SABTip.h */,
+				5A40AC2E24BDA02900818E64 /* SABTip.m */,
+				5A40AC3024BDA04C00818E64 /* SABTipController.h */,
+				5A40AC3124BDA04C00818E64 /* SABTipController.m */,
 				467F766323F2253000A284A5 /* View Controller */,
 				467F766723F2256000A284A5 /* Storyboards */,
 				467F766623F2255000A284A5 /* Resources */,
@@ -172,7 +182,9 @@
 			files = (
 				461E8A9A23EC7AF900C1F2B7 /* AppDelegate.m in Sources */,
 				461E8AB923EC97E200C1F2B7 /* LSITipViewController.m in Sources */,
+				5A40AC2F24BDA02900818E64 /* SABTip.m in Sources */,
 				461E8AAB23EC7AFA00C1F2B7 /* main.m in Sources */,
+				5A40AC3224BDA04C00818E64 /* SABTipController.m in Sources */,
 				461E8A9D23EC7AF900C1F2B7 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,7 +326,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = QL6CVFUT2N;
 				INFOPLIST_FILE = Tips/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -331,7 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = QL6CVFUT2N;
 				INFOPLIST_FILE = Tips/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
